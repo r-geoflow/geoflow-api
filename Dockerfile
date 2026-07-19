@@ -27,10 +27,10 @@ RUN /rocker_scripts/install_geospatial.sh
 # Core dependencies
 RUN install2.r --error --skipinstalled --ncpus -1 httpuv redland
 
-WORKDIR /srv/geoflow-plumber
+WORKDIR /srv/geoflow-api
 
 # Setup renv
-ENV RENV_PATHS_CACHE=/srv/geoflow-plumber/renv/.cache
+ENV RENV_PATHS_CACHE=/srv/geoflow-api/renv/.cache
 RUN R -e "install.packages(c('renv'), repos='https://cran.r-project.org/')"
 
 COPY renv.lock renv.lock
