@@ -6,6 +6,7 @@ library(base64enc)
 library(yaml)
 library(jsonlite)
 library(writexl)
+library(readxl)
 library(plumber)
 library(geoflow)
 
