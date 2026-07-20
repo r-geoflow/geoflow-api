@@ -48,4 +48,4 @@ COPY plumber.R plumber.R
 EXPOSE 8000
 
 # Run API
-CMD ["R", "--vanilla", "-f", "plumber.R"]
+CMD ["R", "-f", "plumber.R"]
