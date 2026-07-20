@@ -6,7 +6,7 @@ library(jsonlite)
 library(writexl)
 library(readxl)
 library(geojsonsf)
-librayr(svglite)
+library(svglite)
 library(geoflow)
 library(plumber)
 
