@@ -1,15 +1,6 @@
 # plumber_geoflow_api.R
 # Plumber API wrapper for geoflow with file upload support
 
-library(mime)
-library(base64enc)
-library(yaml)
-library(jsonlite)
-library(writexl)
-library(readxl)
-library(plumber)
-library(geoflow)
-
 
 # ============================================================================
 # ENDPOINTS

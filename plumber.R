@@ -1,4 +1,11 @@
 # plumber.R - API Entrypoint
+library(mime)
+library(base64enc)
+library(yaml)
+library(jsonlite)
+library(writexl)
+library(readxl)
+library(geoflow)
 library(plumber)
 
 # Load and run the API
