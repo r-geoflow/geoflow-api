@@ -209,6 +209,9 @@ function(config, env = list(),
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = {
               writexl::write_xlsx(data[[filename]], dat_file)
             },
+            "application/json" = {
+              jsonlite::write_json(data[[filename]], dat_file, auto_unbox = TRUE)
+            },
             {
               if(is.raw(data[[filename]])){
                 writeBin(data[[filename]], dat_file)

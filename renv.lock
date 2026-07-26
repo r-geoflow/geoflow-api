@@ -247,6 +247,182 @@
       "RemoteSha": "b993e74aaa0e51a2bf0da8c0a45c9442fc228d80",
       "NeedsCompilation": "no"
     },
+    "RMariaDB": {
+      "Package": "RMariaDB",
+      "Version": "1.3.5",
+      "Source": "Repository",
+      "Title": "Database Interface and MariaDB Driver",
+      "Authors@R": "c( person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-1416-3412\")), person(\"Jeroen\", \"Ooms\", role = \"aut\", comment = c(ORCID = \"0000-0002-4035-0289\")), person(\"David\", \"James\", role = \"aut\"), person(\"Saikat\", \"DebRoy\", role = \"aut\"), person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Jeffrey\", \"Horner\", role = \"aut\"), person(\"R Consortium\", role = \"fnd\"), person(\"RStudio\", role = \"cph\") )",
+      "Description": "Implements a DBI-compliant interface to MariaDB (<https://mariadb.org/>) and MySQL (<https://www.mysql.com/>) databases.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rmariadb.r-dbi.org, https://github.com/r-dbi/RMariaDB, https://downloads.mariadb.org/connector-c/",
+      "BugReports": "https://github.com/r-dbi/RMariaDB/issues",
+      "Depends": [
+        "R (>= 2.8.0)"
+      ],
+      "Imports": [
+        "bit64",
+        "blob",
+        "DBI (>= 1.1.3)",
+        "hms (>= 0.5.0)",
+        "lubridate",
+        "methods",
+        "rlang"
+      ],
+      "Suggests": [
+        "DBItest (>= 1.7.2.9001)",
+        "decor",
+        "readr",
+        "rprojroot",
+        "testthat (>= 3.0.0)",
+        "withr"
+      ],
+      "LinkingTo": [
+        "cpp11"
+      ],
+      "Config/Needs/website": "r-dbi/dbitemplate",
+      "Config/autostyle/scope": "line_breaks",
+      "Config/autostyle/strict": "false",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "RoxygenNote": "7.3.3.9000",
+      "SystemRequirements": "libmariadb-client-lgpl-dev or libmariadb-dev or libmysqlclient-dev, with libssl-dev (deb), mariadb-connector-c-devel or mariadb-devel (rpm), mariadb-connector-c or mysql-connector-c (brew)",
+      "Collate": "'MariaDBConnection.R' 'MariaDBDriver.R' 'MariaDBResult.R' 'RMariaDB-package.R' 'coerce.R' 'compatRowNames.R' 'connect.R' 'cpp11.R' 'dbAppendTable_MariaDBConnection.R' 'dbBegin_MariaDBConnection.R' 'dbBind_MariaDBResult.R' 'dbClearResult_MariaDBResult.R' 'dbColumnInfo_MariaDBResult.R' 'dbCommit_MariaDBConnection.R' 'dbConnect_MariaDBDriver.R' 'dbDataType_MariaDBConnection.R' 'dbDataType_MariaDBDriver.R' 'dbDisconnect_MariaDBConnection.R' 'dbExistsTable_MariaDBConnection_character.R' 'dbFetch_MariaDBResult.R' 'dbGetInfo_MariaDBConnection.R' 'dbGetInfo_MariaDBDriver.R' 'dbGetRowCount_MariaDBResult.R' 'dbGetRowsAffected_MariaDBResult.R' 'dbGetStatement_MariaDBResult.R' 'dbHasCompleted_MariaDBResult.R' 'dbIsValid_MariaDBConnection.R' 'dbIsValid_MariaDBDriver.R' 'dbIsValid_MariaDBResult.R' 'dbListObjects_MariaDBConnection_ANY.R' 'dbListTables_MariaDBConnection.R' 'dbQuoteIdentifier_MariaDBConnection_Id.R' 'dbQuoteIdentifier_MariaDBConnection_SQL.R' 'dbQuoteIdentifier_MariaDBConnection_character.R' 'dbQuoteLiteral_MariaDBConnection.R' 'dbQuoteLiteral_MySQLConnection.R' 'dbQuoteString_MariaDBConnection_SQL.R' 'dbQuoteString_MariaDBConnection_character.R' 'dbReadTable_MariaDBConnection_character.R' 'dbRemoveTable_MariaDBConnection_character.R' 'dbRollback_MariaDBConnection.R' 'dbSendQuery_MariaDBConnection_character.R' 'dbSendStatement_MariaDBConnection_character.R' 'dbUnloadDriver_MariaDBDriver.R' 'dbUnquoteIdentifier_MariaDBConnection_SQL.R' 'dbWriteTable_MariaDBConnection_character_character.R' 'dbWriteTable_MariaDBConnection_character_data.frame.R' 'default.R' 'export.R' 'query.R' 'quote-mysql.R' 'quote.R' 'show_MariaDBConnection.R' 'sqlData_MariaDBConnection.R' 'table.R' 'transaction.R' 'utils.R' 'zzz.R'",
+      "Author": "Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Jeroen Ooms [aut] (ORCID: <https://orcid.org/0000-0002-4035-0289>), David James [aut], Saikat DebRoy [aut], Hadley Wickham [aut], Jeffrey Horner [aut], R Consortium [fnd], RStudio [cph]",
+      "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+      "Repository": "CRAN"
+    },
+    "RPostgreSQL": {
+      "Package": "RPostgreSQL",
+      "Version": "0.7-8",
+      "Source": "Repository",
+      "Date": "2025-03-28",
+      "Title": "R Interface to the 'PostgreSQL' Database System",
+      "Maintainer": "Tomoaki Nishiyama <tomoaki@sci.u-toyama.ac.jp>",
+      "Description": "Database interface and 'PostgreSQL' driver for 'R'. This package provides a Database Interface 'DBI' compliant  driver for 'R' to access 'PostgreSQL' database systems.   In order to build and install this package from source, 'PostgreSQL'  itself must be present your system to provide 'PostgreSQL' functionality  via its libraries and header files. These files are provided as 'postgresql-devel' package under some Linux distributions. On 'macOS' and 'Microsoft Windows' system the attached 'libpq' library source will be used.",
+      "LazyLoad": "true",
+      "Depends": [
+        "R (>= 3.4.0)",
+        "methods",
+        "DBI (>= 0.3)"
+      ],
+      "License": "GPL-3 | file LICENSE",
+      "Copyright": "Authors listed above, PostgreSQL Global Development Group, and The Regents of the University of California",
+      "Collate": "S4R.R zzz.R PostgreSQLSupport.R dbObjectId.R PostgreSQL.R",
+      "URL": "https://github.com/tomoakin/RPostgreSQL, https://cran.r-project.org/package=DBI, https://www.postgresql.org",
+      "Authors@R": "c(person(given = \"Joe\", family = \"Conway\", role = \"aut\"), person(given = \"Dirk\", family = \"Eddelbuettel\", role = \"aut\"), person(given = \"Tomoaki\", family = \"Nishiyama\", role = c(\"aut\", \"cre\"), email = \"tomoaki@sci.u-toyama.ac.jp\"), person(given = c(\"Sameer\", \"Kumar\"), family = \"Prayaga\", role = \"aut\", comment = \"during 2008\"), person(given = \"Neil\", family = \"Tiffin\", role = \"aut\"))",
+      "NeedsCompilation": "yes",
+      "Author": "Joe Conway [aut], Dirk Eddelbuettel [aut], Tomoaki Nishiyama [aut, cre], Sameer Kumar Prayaga [aut] (during 2008), Neil Tiffin [aut]",
+      "Repository": "CRAN"
+    },
+    "RPostgres": {
+      "Package": "RPostgres",
+      "Version": "1.4.10",
+      "Source": "Repository",
+      "Title": "C++ Interface to PostgreSQL",
+      "Date": "2026-02-11",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Jeroen\", \"Ooms\", role = \"aut\"), person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-1416-3412\")), person(\"RStudio\", role = \"cph\"), person(\"R Consortium\", role = \"fnd\"), person(\"Tomoaki\", \"Nishiyama\", role = \"ctb\", comment = \"Code for encoding vectors into strings derived from RPostgreSQL\") )",
+      "Description": "Fully DBI-compliant C++-backed interface to PostgreSQL <https://www.postgresql.org/>, an open-source relational database.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://rpostgres.r-dbi.org, https://github.com/r-dbi/RPostgres",
+      "BugReports": "https://github.com/r-dbi/RPostgres/issues",
+      "Depends": [
+        "R (>= 3.1.0)"
+      ],
+      "Imports": [
+        "bit64",
+        "blob (>= 1.2.0)",
+        "DBI (>= 1.2.0)",
+        "hms (>= 1.0.0)",
+        "lubridate",
+        "methods",
+        "withr"
+      ],
+      "Suggests": [
+        "callr",
+        "covr",
+        "DBItest (>= 1.7.3)",
+        "knitr",
+        "rlang",
+        "rmarkdown",
+        "testthat (>= 3.0.0)"
+      ],
+      "LinkingTo": [
+        "cpp11"
+      ],
+      "Config/Needs/website": "r-dbi/dbitemplate",
+      "VignetteBuilder": "knitr",
+      "Config/Needs/build": "decor",
+      "Config/autostyle/scope": "line_breaks",
+      "Config/autostyle/strict": "false",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyLoad": "true",
+      "RoxygenNote": "7.3.3.9000",
+      "SystemRequirements": "libpq >= 9.0: libpq-dev (deb) or postgresql-devel (rpm)",
+      "Collate": "'PqDriver.R' 'PqConnection.R' 'PqResult.R' 'RPostgres-pkg.R' 'Redshift.R' 'cpp11.R' 'dbAppendTable_PqConnection.R' 'dbBegin_PqConnection.R' 'dbBind_PqResult.R' 'dbClearResult_PqResult.R' 'dbColumnInfo_PqResult.R' 'dbCommit_PqConnection.R' 'dbConnect_PqDriver.R' 'dbConnect_RedshiftDriver.R' 'dbDataType_PqConnection.R' 'dbDataType_PqDriver.R' 'dbDisconnect_PqConnection.R' 'dbExistsTable_PqConnection_Id.R' 'dbExistsTable_PqConnection_character.R' 'dbFetch_PqResult.R' 'dbGetInfo_PqConnection.R' 'dbGetInfo_PqDriver.R' 'dbGetRowCount_PqResult.R' 'dbGetRowsAffected_PqResult.R' 'dbGetStatement_PqResult.R' 'dbHasCompleted_PqResult.R' 'dbIsValid_PqConnection.R' 'dbIsValid_PqDriver.R' 'dbIsValid_PqResult.R' 'dbListFields_PqConnection_Id.R' 'dbListFields_PqConnection_character.R' 'dbListObjects_PqConnection_ANY.R' 'dbListTables_PqConnection.R' 'dbQuoteIdentifier_PqConnection_Id.R' 'dbQuoteIdentifier_PqConnection_SQL.R' 'dbQuoteIdentifier_PqConnection_character.R' 'dbQuoteLiteral_PqConnection.R' 'dbQuoteString_PqConnection_SQL.R' 'dbQuoteString_PqConnection_character.R' 'dbReadTable_PqConnection_character.R' 'dbRemoveTable_PqConnection_character.R' 'dbRollback_PqConnection.R' 'dbSendQuery_PqConnection.R' 'dbUnloadDriver_PqDriver.R' 'dbUnquoteIdentifier_PqConnection_SQL.R' 'dbWriteTable_PqConnection_character_data.frame.R' 'default.R' 'export.R' 'quote.R' 'show_PqConnection.R' 'sqlData_PqConnection.R' 'tables.R' 'transactions.R' 'utils.R'",
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut], Jeroen Ooms [aut], Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), RStudio [cph], R Consortium [fnd], Tomoaki Nishiyama [ctb] (Code for encoding vectors into strings derived from RPostgreSQL)",
+      "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+      "Repository": "CRAN"
+    },
+    "RSQLite": {
+      "Package": "RSQLite",
+      "Version": "3.53.3",
+      "Source": "Repository",
+      "Title": "SQLite Interface for R",
+      "Date": "2026-06-28",
+      "Authors@R": "c( person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-1416-3412\")), person(\"Hadley\", \"Wickham\", role = \"aut\"), person(c(\"David\", \"A.\"), \"James\", role = \"aut\"), person(\"Seth\", \"Falcon\", role = \"aut\"), person(\"D. Richard\", \"Hipp\", role = \"ctb\", comment = \"for the included SQLite sources\"), person(\"Dan\", \"Kennedy\", role = \"ctb\", comment = \"for the included SQLite sources\"), person(\"Joe\", \"Mistachkin\", role = \"ctb\", comment = \"for the included SQLite sources\"), person(, \"SQLite Authors\", role = \"ctb\", comment = \"for the included SQLite sources\"), person(\"Liam\", \"Healy\", role = \"ctb\", comment = \"for the included SQLite sources\"), person(\"R Consortium\", role = \"fnd\"), person(, \"RStudio\", role = \"cph\") )",
+      "Description": "Embeds the SQLite database engine in R and provides an interface compliant with the DBI package. The source for the SQLite engine and for various extensions is included. System libraries will never be consulted because this package relies on static linking for the plugins it includes; this also ensures a consistent experience across all installations. Optionally, when libcurl is available at build time, an experimental HTTP/HTTPS virtual file system (VFS) can be enabled to allow read-only access to remote immutable SQLite database files via URIs.",
+      "License": "LGPL (>= 2.1)",
+      "URL": "https://rsqlite.r-dbi.org, https://github.com/r-dbi/RSQLite",
+      "BugReports": "https://github.com/r-dbi/RSQLite/issues",
+      "Depends": [
+        "R (>= 3.1.0)"
+      ],
+      "Imports": [
+        "bit64",
+        "blob (>= 1.2.0)",
+        "DBI (>= 1.2.0)",
+        "memoise",
+        "methods",
+        "pkgconfig",
+        "rlang"
+      ],
+      "Suggests": [
+        "callr",
+        "cli",
+        "DBItest (>= 1.8.0)",
+        "decor",
+        "gert",
+        "gh",
+        "hms",
+        "httpuv",
+        "knitr",
+        "magrittr",
+        "rmarkdown",
+        "rvest",
+        "testthat (>= 3.0.0)",
+        "withr",
+        "xml2"
+      ],
+      "LinkingTo": [
+        "cpp11 (>= 0.4.0)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "r-dbi/dbitemplate",
+      "Config/autostyle/scope": "line_breaks",
+      "Config/autostyle/strict": "false",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "Collate": "'SQLiteConnection.R' 'SQLKeywords_SQLiteConnection.R' 'SQLiteDriver.R' 'SQLite.R' 'SQLiteResult.R' 'coerce.R' 'compatRowNames.R' 'copy.R' 'cpp11.R' 'datasetsDb.R' 'dbAppendTable_SQLiteConnection.R' 'dbBeginTransaction.R' 'dbBegin_SQLiteConnection.R' 'dbBind_SQLiteResult.R' 'dbClearResult_SQLiteResult.R' 'dbColumnInfo_SQLiteResult.R' 'dbCommit_SQLiteConnection.R' 'dbConnect_SQLiteConnection.R' 'dbConnect_SQLiteDriver.R' 'dbDataType_SQLiteConnection.R' 'dbDataType_SQLiteDriver.R' 'dbDisconnect_SQLiteConnection.R' 'dbExistsTable_SQLiteConnection_Id.R' 'dbExistsTable_SQLiteConnection_character.R' 'dbFetch_SQLiteResult.R' 'dbGetException_SQLiteConnection.R' 'dbGetInfo_SQLiteConnection.R' 'dbGetInfo_SQLiteDriver.R' 'dbGetPreparedQuery.R' 'dbGetPreparedQuery_SQLiteConnection_character_data.frame.R' 'dbGetRowCount_SQLiteResult.R' 'dbGetRowsAffected_SQLiteResult.R' 'dbGetStatement_SQLiteResult.R' 'dbHasCompleted_SQLiteResult.R' 'dbIsValid_SQLiteConnection.R' 'dbIsValid_SQLiteDriver.R' 'dbIsValid_SQLiteResult.R' 'dbListObjects_SQLiteConnection.R' 'dbListResults_SQLiteConnection.R' 'dbListTables_SQLiteConnection.R' 'dbQuoteIdentifier_SQLiteConnection_SQL.R' 'dbQuoteIdentifier_SQLiteConnection_character.R' 'dbReadTable_SQLiteConnection_character.R' 'dbRemoveTable_SQLiteConnection_character.R' 'dbRollback_SQLiteConnection.R' 'dbSendPreparedQuery.R' 'dbSendPreparedQuery_SQLiteConnection_character_data.frame.R' 'dbSendQuery_SQLiteConnection_character.R' 'dbUnloadDriver_SQLiteDriver.R' 'dbUnquoteIdentifier_SQLiteConnection_SQL.R' 'dbWriteTable_SQLiteConnection_character_character.R' 'dbWriteTable_SQLiteConnection_character_data.frame.R' 'db_bind.R' 'deprecated.R' 'export.R' 'fetch_SQLiteResult.R' 'httpvfs.R' 'httpvfs_config.R' 'import-standalone-check_suggested.R' 'import-standalone-purrr.R' 'initExtension.R' 'initRegExp.R' 'isSQLKeyword_SQLiteConnection_character.R' 'make.db.names_SQLiteConnection_character.R' 'pkgconfig.R' 'show_SQLiteConnection.R' 'sqlData_SQLiteConnection.R' 'table.R' 'transactions.R' 'utils.R' 'version.R' 'zzz.R'",
+      "Config/roxygen2/version": "8.0.0.9000",
+      "NeedsCompilation": "yes",
+      "Author": "Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], David A. James [aut], Seth Falcon [aut], D. Richard Hipp [ctb] (for the included SQLite sources), Dan Kennedy [ctb] (for the included SQLite sources), Joe Mistachkin [ctb] (for the included SQLite sources), SQLite Authors [ctb] (for the included SQLite sources), Liam Healy [ctb] (for the included SQLite sources), R Consortium [fnd], RStudio [cph]",
+      "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+      "Repository": "CRAN"
+    },
     "Rcpp": {
       "Package": "Rcpp",
       "Version": "1.1.2",
@@ -453,6 +629,62 @@
       "NeedsCompilation": "no",
       "Author": "Hadley Wickham [aut, cre]",
       "Maintainer": "Hadley Wickham <hadley@rstudio.com>",
+      "Repository": "CRAN"
+    },
+    "atom4R": {
+      "Package": "atom4R",
+      "Version": "0.3-4",
+      "Source": "Repository",
+      "Date": "2025-09-01",
+      "Title": "Tools to Handle and Publish Metadata as 'Atom' XML Format",
+      "Authors@R": "c( person(\"Emmanuel\", \"Blondel\", role = c(\"aut\", \"cre\"), email = \"emmanuel.blondel1@gmail.com\", comment = c(ORCID = \"0000-0002-5870-5762\")))",
+      "Maintainer": "Emmanuel Blondel <emmanuel.blondel1@gmail.com>",
+      "Depends": [
+        "R (>= 3.3)",
+        "methods"
+      ],
+      "Imports": [
+        "R6",
+        "jsonlite",
+        "readr",
+        "XML",
+        "httr",
+        "zip",
+        "rdflib",
+        "keyring"
+      ],
+      "Suggests": [
+        "testthat"
+      ],
+      "Description": "Provides tools to read/write/publish metadata based on the 'Atom' XML syndication format. This includes support of 'Dublin Core' XML implementation, and a client to API(s) implementing the 'AtomPub' - 'SWORD' API specification.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/eblondel/atom4R",
+      "BugReports": "https://github.com/eblondel/atom4R/issues",
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "no",
+      "Author": "Emmanuel Blondel [aut, cre] (ORCID: <https://orcid.org/0000-0002-5870-5762>)",
+      "Repository": "CRAN"
+    },
+    "backports": {
+      "Package": "backports",
+      "Version": "1.5.1",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Reimplementations of Functions Introduced Since R-3.0.0",
+      "Authors@R": "c( person(\"Michel\", \"Lang\", NULL, \"michellang@gmail.com\", role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0001-9754-0393\")), person(\"Duncan\", \"Murdoch\", NULL, \"murdoch.duncan@gmail.com\", role = c(\"aut\")), person(\"R Core Team\", role = \"aut\"))",
+      "Maintainer": "Michel Lang <michellang@gmail.com>",
+      "Description": "Functions introduced or changed since R v3.0.0 are re-implemented in this package. The backports are conditionally exported in order to let R resolve the function name to either the implemented backport, or the respective base version, if available. Package developers can make use of new functions or arguments by selectively importing specific backports to support older installations.",
+      "URL": "https://github.com/r-lib/backports",
+      "BugReports": "https://github.com/r-lib/backports/issues",
+      "License": "GPL-2 | GPL-3",
+      "NeedsCompilation": "yes",
+      "ByteCompile": "yes",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3",
+      "Author": "Michel Lang [cre, aut] (ORCID: <https://orcid.org/0000-0001-9754-0393>), Duncan Murdoch [aut], R Core Team [aut]",
       "Repository": "CRAN"
     },
     "base64enc": {
@@ -723,6 +955,38 @@
       "Maintainer": "Richard Iannone <rich@posit.co>",
       "Repository": "CRAN"
     },
+    "blob": {
+      "Package": "blob",
+      "Version": "1.3.0",
+      "Source": "Repository",
+      "Title": "A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = \"cre\"), person(\"RStudio\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "R's raw vector is useful for storing a single binary object. What if you want to put a vector of them in a data frame? The 'blob' package provides the blob object, a list of raw vectors, suitable for use as a column in data frame.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://blob.tidyverse.org, https://github.com/tidyverse/blob",
+      "BugReports": "https://github.com/tidyverse/blob/issues",
+      "Imports": [
+        "methods",
+        "rlang",
+        "vctrs (>= 0.2.1)"
+      ],
+      "Suggests": [
+        "covr",
+        "crayon",
+        "pillar (>= 1.2.1)",
+        "testthat (>= 3.0.0)"
+      ],
+      "Config/autostyle/scope": "line_breaks",
+      "Config/autostyle/strict": "false",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3.9000",
+      "NeedsCompilation": "no",
+      "Author": "Hadley Wickham [aut], Kirill Müller [cre], RStudio [cph, fnd]",
+      "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+      "Repository": "CRAN"
+    },
     "brew": {
       "Package": "brew",
       "Version": "1.0-10",
@@ -898,6 +1162,49 @@
       "NeedsCompilation": "no",
       "Author": "Jennifer Bryan [cre, aut], Hadley Wickham [ctb]",
       "Maintainer": "Jennifer Bryan <jenny@stat.ubc.ca>",
+      "Repository": "CRAN"
+    },
+    "checkmate": {
+      "Package": "checkmate",
+      "Version": "2.3.4",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Fast and Versatile Argument Checks",
+      "Description": "Tests and assertions to perform frequent argument checks. A substantial part of the package was written in C to minimize any worries about execution time overhead.",
+      "Authors@R": "c( person(\"Michel\", \"Lang\", NULL, \"michellang@gmail.com\", role = c(\"cre\", \"aut\"), comment = c(ORCID = \"0000-0001-9754-0393\")), person(\"Bernd\", \"Bischl\", NULL, \"bernd_bischl@gmx.net\", role = \"ctb\"), person(\"Dénes\", \"Tóth\", NULL, \"toth.denes@kogentum.hu\", role = \"ctb\", comment = c(ORCID = \"0000-0003-4262-3217\")) )",
+      "URL": "https://mllg.github.io/checkmate/, https://github.com/mllg/checkmate",
+      "URLNote": "https://github.com/mllg/checkmate",
+      "BugReports": "https://github.com/mllg/checkmate/issues",
+      "NeedsCompilation": "yes",
+      "ByteCompile": "yes",
+      "Encoding": "UTF-8",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "Imports": [
+        "backports (>= 1.1.0)",
+        "utils"
+      ],
+      "Suggests": [
+        "R6",
+        "fastmatch",
+        "data.table (>= 1.9.8)",
+        "devtools",
+        "ggplot2",
+        "knitr",
+        "magrittr",
+        "microbenchmark",
+        "rmarkdown",
+        "testthat (>= 3.0.4)",
+        "tinytest (>= 1.1.0)",
+        "tibble"
+      ],
+      "License": "BSD_3_clause + file LICENSE",
+      "VignetteBuilder": "knitr",
+      "RoxygenNote": "7.3.3",
+      "Collate": "'AssertCollection.R' 'allMissing.R' 'anyInfinite.R' 'anyMissing.R' 'anyNaN.R' 'asInteger.R' 'assert.R' 'helper.R' 'makeExpectation.R' 'makeTest.R' 'makeAssertion.R' 'checkAccess.R' 'checkArray.R' 'checkAtomic.R' 'checkAtomicVector.R' 'checkCharacter.R' 'checkChoice.R' 'checkClass.R' 'checkComplex.R' 'checkCount.R' 'checkDataFrame.R' 'checkDataTable.R' 'checkDate.R' 'checkDirectoryExists.R' 'checkDisjunct.R' 'checkDouble.R' 'checkEnvironment.R' 'checkFALSE.R' 'checkFactor.R' 'checkFileExists.R' 'checkFlag.R' 'checkFormula.R' 'checkFunction.R' 'checkInt.R' 'checkInteger.R' 'checkIntegerish.R' 'checkList.R' 'checkLogical.R' 'checkMatrix.R' 'checkMultiClass.R' 'checkNamed.R' 'checkNames.R' 'checkNull.R' 'checkNumber.R' 'checkNumeric.R' 'checkOS.R' 'checkPOSIXct.R' 'checkPathForOutput.R' 'checkPermutation.R' 'checkR6.R' 'checkRaw.R' 'checkScalar.R' 'checkScalarNA.R' 'checkSetEqual.R' 'checkString.R' 'checkSubset.R' 'checkTRUE.R' 'checkTibble.R' 'checkVector.R' 'coalesce.R' 'isIntegerish.R' 'matchArg.R' 'qassert.R' 'qassertr.R' 'vname.R' 'wfwl.R' 'zzz.R'",
+      "Author": "Michel Lang [cre, aut] (ORCID: <https://orcid.org/0000-0001-9754-0393>), Bernd Bischl [ctb], Dénes Tóth [ctb] (ORCID: <https://orcid.org/0000-0003-4262-3217>)",
+      "Maintainer": "Michel Lang <michellang@gmail.com>",
       "Repository": "CRAN"
     },
     "class": {
@@ -1191,6 +1498,48 @@
       "NeedsCompilation": "yes",
       "Author": "Jeroen Ooms [aut, cre] (ORCID: <https://orcid.org/0000-0002-4035-0289>), Hadley Wickham [ctb], Posit Software, PBC [cph]",
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
+      "Repository": "CRAN"
+    },
+    "dataverse": {
+      "Package": "dataverse",
+      "Version": "0.3.16",
+      "Source": "Repository",
+      "Title": "Client for Dataverse 4+ Repositories",
+      "Authors@R": "c(person(given = \"Shiro\",  family = \"Kuriwaki\", role = c(\"aut\", \"cre\"), email = \"shirokuriwaki@gmail.com\", comment = c(ORCID = \"0000-0002-5687-2647\")), person(given = \"Will\",  family = \"Beasley\", role=c(\"aut\"), email=\"wibeasley@hotmail.com\", comment = c(ORCID = \"0000-0002-5613-5006\")), person(given = \"Thomas J.\",  family = \"Leeper\", role = c(\"aut\"), email = \"thosjleeper@gmail.com\", comment = c(ORCID = \"0000-0003-4097-6326\")), person(given = \"Philip\",  family = \"Durbin\", role = c(\"aut\"), email = \"philipdurbin@gmail.com\", comment = c(ORCID = \"0000-0002-9528-9470\")), person(given = \"Sebastian\",  family = \"Karcher\", role = c(\"aut\"), email = \"karcher@u.northwestern.edu\", comment = c(ORCID = \"0000-0001-8249-7388\")), person(given = \"Jan\",  family = \"Kanis\",  role = \"ctb\"), person(given = \"Edward\",  family = \"Jee\",  role = \"ctb\"), person(given = \"Johannes\",  family = \"Gruber\", role = c(\"ctb\"), email = \"JohannesB.Gruber@gmail.com\", comment = c(ORCID = \"0000-0001-9177-1772\")), person(given = \"Martin\", family = \"Morgan\", role = \"ctb\", email = \"mtmorgan.xyz@gmail.com\", comment = c(ORCID = \"0000-0002-5874-8148\")), person(given = \"Konrad\", family = \"Oberwimmer\", role = \"ctb\", email = \"konrad.oberwimmer@gmail.com\"))",
+      "Imports": [
+        "checkmate",
+        "httr",
+        "memoise",
+        "cachem",
+        "jsonlite",
+        "readr",
+        "stats",
+        "utils",
+        "tools",
+        "xml2"
+      ],
+      "Suggests": [
+        "covr",
+        "haven",
+        "knitr",
+        "purrr",
+        "rmarkdown",
+        "testthat",
+        "devtools",
+        "tibble",
+        "yaml"
+      ],
+      "Description": "Provides access to Dataverse APIs <https://dataverse.org/> (versions 4-5), enabling data search, retrieval, and deposit. For Dataverse versions <= 3.0, use the archived 'dvn' package <https://cran.r-project.org/package=dvn>.",
+      "License": "GPL-2",
+      "URL": "https://iqss.github.io/dataverse-client-r/, https://dataverse.org/, https://github.com/iqss/dataverse-client-r",
+      "BugReports": "https://github.com/iqss/dataverse-client-r/issues",
+      "VignetteBuilder": "knitr",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "Config/testthat/edition": "3",
+      "NeedsCompilation": "no",
+      "Author": "Shiro Kuriwaki [aut, cre] (ORCID: <https://orcid.org/0000-0002-5687-2647>), Will Beasley [aut] (ORCID: <https://orcid.org/0000-0002-5613-5006>), Thomas J. Leeper [aut] (ORCID: <https://orcid.org/0000-0003-4097-6326>), Philip Durbin [aut] (ORCID: <https://orcid.org/0000-0002-9528-9470>), Sebastian Karcher [aut] (ORCID: <https://orcid.org/0000-0001-8249-7388>), Jan Kanis [ctb], Edward Jee [ctb], Johannes Gruber [ctb] (ORCID: <https://orcid.org/0000-0001-9177-1772>), Martin Morgan [ctb] (ORCID: <https://orcid.org/0000-0002-5874-8148>), Konrad Oberwimmer [ctb]",
+      "Maintainer": "Shiro Kuriwaki <shirokuriwaki@gmail.com>",
       "Repository": "CRAN"
     },
     "desc": {
@@ -1625,6 +1974,55 @@
       "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
       "Repository": "CRAN"
     },
+    "gargle": {
+      "Package": "gargle",
+      "Version": "1.6.1",
+      "Source": "Repository",
+      "Title": "Utilities for Working with Google APIs",
+      "Authors@R": "c( person(\"Jennifer\", \"Bryan\", , \"jenny@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-6983-2759\")), person(\"Craig\", \"Citro\", , \"craigcitro@google.com\", role = \"aut\"), person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0003-4757-117X\")), person(\"Google Inc\", role = \"cph\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Provides utilities for working with Google APIs <https://developers.google.com/apis-explorer>.  This includes functions and classes for handling common credential types and for preparing, executing, and processing HTTP requests.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://gargle.r-lib.org, https://github.com/r-lib/gargle",
+      "BugReports": "https://github.com/r-lib/gargle/issues",
+      "Depends": [
+        "R (>= 4.1)"
+      ],
+      "Imports": [
+        "cli (>= 3.0.1)",
+        "fs (>= 1.3.1)",
+        "glue (>= 1.3.0)",
+        "httr (>= 1.4.5)",
+        "jsonlite",
+        "lifecycle (>= 0.2.0)",
+        "openssl",
+        "rappdirs",
+        "rlang (>= 1.1.0)",
+        "stats",
+        "utils",
+        "withr"
+      ],
+      "Suggests": [
+        "aws.ec2metadata",
+        "aws.signature",
+        "covr",
+        "httpuv",
+        "knitr",
+        "rmarkdown",
+        "sodium",
+        "spelling",
+        "testthat (>= 3.1.7)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "Language": "en-US",
+      "RoxygenNote": "7.3.3",
+      "NeedsCompilation": "no",
+      "Author": "Jennifer Bryan [aut, cre] (ORCID: <https://orcid.org/0000-0002-6983-2759>), Craig Citro [aut], Hadley Wickham [aut] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Google Inc [cph], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Jennifer Bryan <jenny@posit.co>",
+      "Repository": "CRAN"
+    },
     "generics": {
       "Package": "generics",
       "Version": "0.1.4",
@@ -2037,6 +2435,83 @@
       "NeedsCompilation": "yes",
       "Author": "Jim Hester [aut] (ORCID: <https://orcid.org/0000-0002-2739-7082>), Jennifer Bryan [aut, cre] (ORCID: <https://orcid.org/0000-0002-6983-2759>), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Jennifer Bryan <jenny@posit.co>",
+      "Repository": "CRAN"
+    },
+    "googledrive": {
+      "Package": "googledrive",
+      "Version": "2.1.2",
+      "Source": "Repository",
+      "Title": "An Interface to Google Drive",
+      "Authors@R": "c( person(\"Lucy\", \"D'Agostino McGowan\", , role = \"aut\"), person(\"Jennifer\", \"Bryan\", , \"jenny@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-6983-2759\")), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Manage Google Drive files from R.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://googledrive.tidyverse.org, https://github.com/tidyverse/googledrive",
+      "BugReports": "https://github.com/tidyverse/googledrive/issues",
+      "Depends": [
+        "R (>= 4.1)"
+      ],
+      "Imports": [
+        "cli (>= 3.0.0)",
+        "gargle (>= 1.6.0)",
+        "glue (>= 1.4.2)",
+        "httr",
+        "jsonlite",
+        "lifecycle",
+        "magrittr",
+        "pillar (>= 1.9.0)",
+        "purrr (>= 1.0.1)",
+        "rlang (>= 1.0.2)",
+        "tibble (>= 2.0.0)",
+        "utils",
+        "uuid",
+        "vctrs (>= 0.3.0)",
+        "withr"
+      ],
+      "Suggests": [
+        "curl",
+        "dplyr (>= 1.0.0)",
+        "knitr",
+        "rmarkdown",
+        "spelling",
+        "testthat (>= 3.1.5)"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse, tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "Language": "en-US",
+      "RoxygenNote": "7.3.3",
+      "NeedsCompilation": "no",
+      "Author": "Lucy D'Agostino McGowan [aut], Jennifer Bryan [aut, cre] (ORCID: <https://orcid.org/0000-0002-6983-2759>), Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Jennifer Bryan <jenny@posit.co>",
+      "Repository": "CRAN"
+    },
+    "gsheet": {
+      "Package": "gsheet",
+      "Version": "0.4.6",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Download Google Sheets Using Just the URL",
+      "Date": "2024-12-13",
+      "Authors@R": "person(\"Max\", \"Conway\", email = \"conway.max1@gmail.com\", role = c(\"aut\", \"cre\"))",
+      "Description": "Simple package to download Google Sheets using just the sharing link. Spreadsheets can be downloaded as a data frame, or as plain text to parse manually. Google Sheets is the new name for Google Docs Spreadsheets <https://www.google.com/sheets/about>.",
+      "License": "GPL-3",
+      "Encoding": "UTF-8",
+      "URL": "https://github.com/maxconway/gsheet",
+      "BugReports": "https://github.com/maxconway/gsheet/issues",
+      "Language": "en-GB",
+      "Imports": [
+        "httr",
+        "stringr"
+      ],
+      "Suggests": [
+        "testthat",
+        "readr"
+      ],
+      "RoxygenNote": "7.3.2",
+      "NeedsCompilation": "no",
+      "Author": "Max Conway [aut, cre]",
+      "Maintainer": "Max Conway <conway.max1@gmail.com>",
       "Repository": "CRAN"
     },
     "gt": {
@@ -2774,6 +3249,52 @@
       "Maintainer": "Yihui Xie <xie@yihui.name>",
       "Repository": "CRAN"
     },
+    "lubridate": {
+      "Package": "lubridate",
+      "Version": "1.9.5",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Make Dealing with Dates a Little Easier",
+      "Authors@R": "c( person(\"Vitalie\", \"Spinu\", , \"spinuvit@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Garrett\", \"Grolemund\", role = \"aut\"), person(\"Hadley\", \"Wickham\", role = \"aut\"), person(\"Davis\", \"Vaughan\", role = \"ctb\"), person(\"Ian\", \"Lyttle\", role = \"ctb\"), person(\"Imanuel\", \"Costigan\", role = \"ctb\"), person(\"Jason\", \"Law\", role = \"ctb\"), person(\"Doug\", \"Mitarotonda\", role = \"ctb\"), person(\"Joseph\", \"Larmarange\", role = \"ctb\"), person(\"Jonathan\", \"Boiser\", role = \"ctb\"), person(\"Chel Hee\", \"Lee\", role = \"ctb\") )",
+      "Maintainer": "Vitalie Spinu <spinuvit@gmail.com>",
+      "Description": "Functions to work with date-times and time-spans: fast and user friendly parsing of date-time data, extraction and updating of components of a date-time (years, months, days, hours, minutes, and seconds), algebraic manipulation on date-time and time-span objects. The 'lubridate' package has a consistent and memorable syntax that makes working with dates easy and fun.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://lubridate.tidyverse.org, https://github.com/tidyverse/lubridate",
+      "BugReports": "https://github.com/tidyverse/lubridate/issues",
+      "Depends": [
+        "methods",
+        "R (>= 3.2)"
+      ],
+      "Imports": [
+        "generics",
+        "timechange (>= 0.4.0)"
+      ],
+      "Suggests": [
+        "covr",
+        "knitr",
+        "rmarkdown",
+        "testthat (>= 2.1.0)",
+        "vctrs (>= 0.6.5)"
+      ],
+      "Enhances": [
+        "chron",
+        "data.table",
+        "timeDate",
+        "tis",
+        "zoo"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "LazyData": "true",
+      "RoxygenNote": "7.3.3",
+      "SystemRequirements": "A system with zoneinfo data (e.g. /usr/share/zoneinfo). On Windows the zoneinfo included with R is used.",
+      "Collate": "'Dates.r' 'POSIXt.r' 'util.r' 'parse.r' 'timespans.r' 'intervals.r' 'difftimes.r' 'durations.r' 'periods.r' 'accessors-date.R' 'accessors-day.r' 'accessors-dst.r' 'accessors-hour.r' 'accessors-minute.r' 'accessors-month.r' 'accessors-quarter.r' 'accessors-second.r' 'accessors-tz.r' 'accessors-week.r' 'accessors-year.r' 'am-pm.r' 'time-zones.r' 'numeric.r' 'coercion.r' 'constants.r' 'cyclic_encoding.r' 'data.r' 'decimal-dates.r' 'deprecated.r' 'format_ISO8601.r' 'guess.r' 'hidden.r' 'instants.r' 'leap-years.r' 'ops-addition.r' 'ops-compare.r' 'ops-division.r' 'ops-integer-division.r' 'ops-m+.r' 'ops-modulo.r' 'ops-multiplication.r' 'ops-subtraction.r' 'package.r' 'pretty.r' 'round.r' 'stamp.r' 'tzdir.R' 'update.r' 'vctrs.R' 'zzz.R'",
+      "NeedsCompilation": "yes",
+      "Author": "Vitalie Spinu [aut, cre], Garrett Grolemund [aut], Hadley Wickham [aut], Davis Vaughan [ctb], Ian Lyttle [ctb], Imanuel Costigan [ctb], Jason Law [ctb], Doug Mitarotonda [ctb], Joseph Larmarange [ctb], Jonathan Boiser [ctb], Chel Hee Lee [ctb]",
+      "Repository": "CRAN"
+    },
     "lwgeom": {
       "Package": "lwgeom",
       "Version": "0.2-14",
@@ -2924,6 +3445,40 @@
       "NeedsCompilation": "yes",
       "Author": "Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>, https://yihui.org), Jeffrey Horner [ctb], Beilei Bian [ctb]",
       "Maintainer": "Yihui Xie <xie@yihui.name>",
+      "Repository": "CRAN"
+    },
+    "ocs4R": {
+      "Package": "ocs4R",
+      "Version": "0.3.1",
+      "Source": "Repository",
+      "Date": "2026-04-29",
+      "Title": "Interface to Open Collaboration Services (OCS) REST API",
+      "Authors@R": "c( person(\"Emmanuel\", \"Blondel\", role = c(\"aut\", \"cre\"), email = \"emmanuel.blondel1@gmail.com\", comment = c(ORCID = \"0000-0002-5870-5762\")))",
+      "Maintainer": "Emmanuel Blondel <emmanuel.blondel1@gmail.com>",
+      "Depends": [
+        "R (>= 3.3.0)",
+        "methods"
+      ],
+      "Imports": [
+        "R6",
+        "openssl",
+        "curl",
+        "httr",
+        "jsonlite",
+        "XML",
+        "keyring"
+      ],
+      "Suggests": [
+        "testthat"
+      ],
+      "Description": "Provides an Interface to Open Collaboration Services 'OCS' (<https://www.open-collaboration-services.org/>) REST API.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/eblondel/ocs4R",
+      "BugReports": "https://github.com/eblondel/ocs4R/issues",
+      "LazyLoad": "yes",
+      "RoxygenNote": "7.3.1",
+      "NeedsCompilation": "no",
+      "Author": "Emmanuel Blondel [aut, cre] (ORCID: <https://orcid.org/0000-0002-5870-5762>)",
       "Repository": "CRAN"
     },
     "openssl": {
@@ -3581,6 +4136,36 @@
       "NeedsCompilation": "yes",
       "Author": "Hadley Wickham [aut, cre] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Lionel Henry [aut], Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "CRAN"
+    },
+    "rapiclient": {
+      "Package": "rapiclient",
+      "Version": "0.1.8",
+      "Source": "Repository",
+      "Type": "Package",
+      "Title": "Dynamic OpenAPI/Swagger Client",
+      "Authors@R": "c( person(\"Darko\", \"Bergant\", , \"darko.bergant@gmail.com\", \"aut\"), person(\"Marcel\", \"Ramos\", , \"marcel.ramos@sph.cuny.edu\", c(\"cre\", \"ctb\"), comment = c(ORCID = \"0000-0002-3242-0582\") ), person(\"Alexandru\", \"Mahmoud\", , , \"ctb\"), person(\"Sean\", \"Davis\", , , \"ctb\"), person(\"Martin\", \"Morgan\", , , \"ctb\") )",
+      "URL": "https://github.com/bergant/rapiclient",
+      "BugReports": "https://github.com/bergant/rapiclient/issues",
+      "Description": "Access services specified in OpenAPI (formerly Swagger) format. It is not a code generator. Client is generated dynamically as a list of R  functions.",
+      "Depends": [
+        "R (>= 3.3.0)"
+      ],
+      "License": "MIT + file LICENSE",
+      "Imports": [
+        "jsonlite",
+        "httr",
+        "tools",
+        "yaml"
+      ],
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.2",
+      "Suggests": [
+        "testthat"
+      ],
+      "NeedsCompilation": "no",
+      "Author": "Darko Bergant [aut], Marcel Ramos [cre, ctb] (<https://orcid.org/0000-0002-3242-0582>), Alexandru Mahmoud [ctb], Sean Davis [ctb], Martin Morgan [ctb]",
+      "Maintainer": "Marcel Ramos <marcel.ramos@sph.cuny.edu>",
       "Repository": "CRAN"
     },
     "rapidjsonr": {
@@ -4974,6 +5559,34 @@
       "Maintainer": "Lionel Henry <lionel@posit.co>",
       "Repository": "CRAN"
     },
+    "timechange": {
+      "Package": "timechange",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Title": "Efficient Manipulation of Date-Times",
+      "Authors@R": "c(person(\"Vitalie\", \"Spinu\", email = \"spinuvit@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Google Inc.\", role = c(\"ctb\", \"cph\")))",
+      "Description": "Efficient routines for manipulation of date-time objects while accounting for time-zones and daylight saving times. The package includes utilities for updating of date-time components (year, month, day etc.), modification of time-zones, rounding of date-times, period addition and subtraction etc. Parts of the 'CCTZ' source code, released under the Apache 2.0 License, are included in this package. See <https://github.com/google/cctz> for more details.",
+      "Depends": [
+        "R (>= 3.3)"
+      ],
+      "License": "GPL (>= 3)",
+      "Encoding": "UTF-8",
+      "LinkingTo": [
+        "cpp11 (>= 0.2.7)"
+      ],
+      "Suggests": [
+        "testthat (>= 0.7.1.99)",
+        "knitr"
+      ],
+      "SystemRequirements": "A system with zoneinfo data (e.g. /usr/share/zoneinfo). On Windows the zoneinfo included with R is used.",
+      "BugReports": "https://github.com/vspinu/timechange/issues",
+      "URL": "https://github.com/vspinu/timechange/",
+      "RoxygenNote": "7.2.1",
+      "NeedsCompilation": "yes",
+      "Author": "Vitalie Spinu [aut, cre], Google Inc. [ctb, cph]",
+      "Maintainer": "Vitalie Spinu <spinuvit@gmail.com>",
+      "Repository": "CRAN"
+    },
     "tinytex": {
       "Package": "tinytex",
       "Version": "0.60",
@@ -5525,6 +6138,49 @@
       "NeedsCompilation": "yes",
       "Author": "Hadley Wickham [cre] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Shawn Garbett [ctb] (ORCID: <https://orcid.org/0000-0003-4079-5621>), Jeremy Stephens [aut, ctb], Kirill Simonov [aut], Yihui Xie [ctb] (ORCID: <https://orcid.org/0000-0003-0645-5666>), Zhuoer Dong [ctb], Jeffrey Horner [ctb], reikoch [ctb], Will Beasley [ctb] (ORCID: <https://orcid.org/0000-0002-5613-5006>), Brendan O'Connor [ctb], Michael Quinn [ctb], Charlie Gao [ctb], Gregory R. Warnes [ctb], Zhian N. Kamvar [ctb]",
       "Maintainer": "Hadley Wickham <hadley@posit.co>",
+      "Repository": "CRAN"
+    },
+    "zen4R": {
+      "Package": "zen4R",
+      "Version": "0.10.6",
+      "Source": "Repository",
+      "Date": "2026-07-07",
+      "Title": "Interface to 'Zenodo' REST API",
+      "Authors@R": "c( person(\"Emmanuel\", \"Blondel\", role = c(\"aut\", \"cre\"), email = \"emmanuel.blondel1@gmail.com\", comment = c(ORCID = \"0000-0002-5870-5762\")), person(\"Julien\", \"Barde\", role = c(\"ctb\"), email = \"julien.barde@ird.fr\", comment = c(ORCID = \"0000-0002-3519-6141\")), person(\"Stephen\", \"Eglen\", role = c(\"ctb\"), comment = c(ORCID = \"0000-0001-8607-8025\")), person(\"Hans\", \"Van Calster\", role = c(\"ctb\"), comment = c(ORCID = \"0000-0001-8595-8426\")), person(\"Floris\", \"Vanderhaeghe\", role = c(\"ctb\"), comment = c(ORCID = \"0000-0002-6378-6229\")), person(\"Jemma\", \"Stachelek\", role = c(\"ctb\"), comment = c(ORCID = \"0000-0002-5924-2464\")), person(\"Collin\", \"Schwantes\", role = c(\"ctb\"), comment = c(ORCID = \"0000-0002-9882-941X\")), person(\"Nicholas\", \"Tierney\", role = c(\"ctb\"), comment = c(ORCID = \"0000-0003-1460-8722\")))",
+      "Maintainer": "Emmanuel Blondel <emmanuel.blondel1@gmail.com>",
+      "Depends": [
+        "R (>= 3.3.0)",
+        "methods"
+      ],
+      "Imports": [
+        "R6",
+        "cli",
+        "httr",
+        "jsonlite",
+        "XML",
+        "xml2",
+        "keyring",
+        "tools",
+        "utf8",
+        "plyr"
+      ],
+      "Suggests": [
+        "testthat",
+        "parallel",
+        "knitr",
+        "markdown",
+        "atom4R"
+      ],
+      "Description": "Provides an Interface to 'Zenodo' (<https://zenodo.org>) REST API,  including management of depositions, attribution of DOIs by 'Zenodo' and  upload and download of files.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/eblondel/zen4R",
+      "BugReports": "https://github.com/eblondel/zen4R/issues",
+      "LazyLoad": "yes",
+      "RoxygenNote": "7.3.3",
+      "Encoding": "UTF-8",
+      "VignetteBuilder": "knitr",
+      "NeedsCompilation": "no",
+      "Author": "Emmanuel Blondel [aut, cre] (ORCID: <https://orcid.org/0000-0002-5870-5762>), Julien Barde [ctb] (ORCID: <https://orcid.org/0000-0002-3519-6141>), Stephen Eglen [ctb] (ORCID: <https://orcid.org/0000-0001-8607-8025>), Hans Van Calster [ctb] (ORCID: <https://orcid.org/0000-0001-8595-8426>), Floris Vanderhaeghe [ctb] (ORCID: <https://orcid.org/0000-0002-6378-6229>), Jemma Stachelek [ctb] (ORCID: <https://orcid.org/0000-0002-5924-2464>), Collin Schwantes [ctb] (ORCID: <https://orcid.org/0000-0002-9882-941X>), Nicholas Tierney [ctb] (ORCID: <https://orcid.org/0000-0003-1460-8722>)",
       "Repository": "CRAN"
     },
     "zip": {
