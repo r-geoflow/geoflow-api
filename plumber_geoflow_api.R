@@ -39,12 +39,14 @@ function() {
 #* @param metadata_contacts:[file] Metadata contact local files(s)
 #* @param metadata_dictionary:[file] Metadata dictionary local file(s)
 #* @param metadata_registers:[file] Metadata dictionary registers (R scripts)
+#* @param actions:[file] Custom actions (R scripts)
 #* @param data:[file] Data local file(s)
 function(config, env = list(),
          metadata_entities = list(),
          metadata_contacts = list(),
          metadata_dictionary = list(),
          metadata_registers = list(),
+         actions = list(),
          data = list()){
   
   # Create temporary working directory
@@ -182,6 +184,15 @@ function(config, env = list(),
           reg_file = file.path(temp_dir, filename)
           if(!endsWith(filename, ".R")) next
           writeBin(metadata_registers[[filename]], reg_file)
+        }
+      }
+      
+      #custom actions
+      if(length(actions)>0){
+        for(filename in names(actions)){
+          act_file = file.path(temp_dir, filename)
+          if(!endsWith(filename, ".R")) next
+          writeBin(actions[[filename]], act_file)
         }
       }
       
