@@ -8,7 +8,10 @@ library(readxl)
 library(geojsonsf)
 library(svglite)
 library(geoflow)
+library(blastula)
+library(gt)
 library(plumber)
+library(RFirmsGeo)
 
 # Load and run the API
 pr <- plumb("plumber_geoflow_api.R")
