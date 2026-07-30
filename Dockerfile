@@ -1,4 +1,4 @@
-FROM rocker/shiny:4.5.1
+FROM rocker/r-base:latest
 
 LABEL org.opencontainers.image.title="geoflow-api"
 LABEL org.opencontainers.image.url="https://github.com/r-geoflow/geoflow-api"
